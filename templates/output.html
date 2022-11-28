@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ 	Booking Form
+ {% endblock %}
+
+ {% block body %}
+ 	<h1>Norton Accomodation Book Form</h1>
+
+    <table>
+        <p>Your Place has been rserved please keep the reference number safe for you will use it</p>
+        <h2>Book Receipt</h2>
+        <thead>
+            <tr>
+                <th width="150">Ref Number</th>
+                <th width="100">Surname</th>
+                <th width="200">Last</th>
+                <th width="200">Email</th>
+                <th width="50">Stay Duration</th>
+                <th width="200">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item[1] }}</td>
+                    <td>{{ item[2] }}</td>
+                    <td>{{ item[3] }}</td>
+                    <td>{{ item[4] }}</td>
+                    <td>{{ item[5] }}</td>
+                    <td>{{ item[6] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>Please keep this form and take note of the refrence number to track your booking</p>
+ {% endblock %}

@@ -1,0 +1,49 @@
+body {
+	background-color: turquoise;
+	display: flex;
+	flex-direction: column;
+	/*background-image: url("/static/bg2.jpg");
+	background-repeat: repeat-x;*/
+}
+
+header {
+	text-align: center;
+	border-style: outset;
+}
+
+main {
+	text-align: left;
+	padding: 50px;
+	flex-direction: row;
+	flex: auto;
+	display: flex;
+}
+
+li {
+	text-align: center;
+	display: inline;
+	padding: 5px;
+}
+
+footer {
+	text-align: center;
+}
+
+article {
+	flex: 2;
+	overflow-y: auto;
+}
+
+aside {
+	flex: 1;
+	overflow-y: auto;
+}
+
+img {
+	height: 250px;
+	width: 250px;
+}
+
+.split {
+	border-style: inset;
+}

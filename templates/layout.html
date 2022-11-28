@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/static/styles.css">
+	<title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="" alt="LOGO">
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<address>
+					<p><a href="mailto:norton@Accomodation.org.zw">Norton Mail</a></p>
+					<p>Call: +263 77 777 7777</p>
+					<p>742 Evergreen Street, Norton, Zimbabwe</p>
+				</address>
+			</ul>
+		</div>
+	</header>
+	{% block body %}
+	{% endblock %}
+	<footer>
+		&copy 2022 Norton Accomodation
+	</footer>
+</body>
+</html>

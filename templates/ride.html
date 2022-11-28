@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ 	Transport Booking
+ {% endblock %}
+
+ {% block body %}
+ 	<h1>Booking Services</h1>
+
+    <p>We as the Norton accomodation services and our other partners.
+        <br>We offer our beloved visitors transport from Airport to their hotels and or lodges.</p>
+    <p>Please fill in the form below so we may give you our best services</p>
+    <form action="/ride" method="post">
+        <div>
+            <h5>Recipient Name</h5>
+            <input type="text" name="first" required placeholder="Surname"/>
+            <input type="text" name="last" required placeholder="First"/>
+        </div>
+        <div>
+            <h5>Recipient Email</h5>
+            <input type="email" name="email" required placeholder="Recipient Email"/>
+        </div>
+        <div>
+            <h5>Days To Stay</h5>
+            <input type="number" name="days" required placeholder="Number of Days" min="1"/>
+        </div>
+        <div>
+            <h5>Transport?</h5>
+            <input type="radio" name="transport" required value="Yes"/>Yes
+            <input type="radio" name="transport" required value="No"/>No
+        </div>
+        <div>
+            <button type="submit">Book</button>
+        </div>
+    </form>
+ {% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+	Home
+{% endblock %}
+
+{% block body %}
+	<main class="">
+		<article>
+			<figure>
+				<img src="/static/pic1.jpg" alt="a camera picture" class="s">
+				<img src="/static/pic2.jpg" alt="a camera picture" class="s">
+				<br>
+				<figcaption>This is our commitment to safe stay for everyone who comes here</figcaption>
+			</figure>
+
+			<div>Book Accomodation And Transport</div>
+			<b>Put a few pics of accomodation and add link for users to book their accomodation
+			Put option for people to book their rides to or from their hotels</b> <br>
+			<a href="/ride">Bookings</a>
+			<br>
+			<div>Visit Local Resorts</div>
+			<b>Put a few local sorroundings pics of Zimparks and add links to each respective site</b>
+			<br> <a href="www.zimparks.org.zw">ZimParks Site</a>
+			
+		</article>
+
+		<aside>
+			<div>
+				<h3>Share</h3>
+			</div>
+			<p>Please ensure that you budget your money as per the local exchange rates. Visit the below link to double check</p>
+			<a href="/exchange">Local Exchange Rates</a> <br>
+			<br>
+			<h1>Comments</h1>
+			<table>
+				<tbody>
+				{% for item in items %}
+				<tr>
+					<td><b>{{ item.name }}</b></td>
+					<td>{{ item.comment }}</td>
+					<td>{{ item.date }}</td>
+				</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+			<form action="" method="post">
+				<p>Share your experience with us!</p>
+				<h4>Name</h4>
+				<div class="split">
+					<input type="text" name="username" autofocus autocomplete="off" placeholder="Name" required>
+				</div>
+				<h4>Email</h4>
+				<div class="split">
+					<input type="email" name="mail" autofocus autocomplete="off" placeholder="email" required>
+				</div>
+				<br>
+				<h4>Comment</h4>
+				<textarea name="comments" cols="40" rows="5" placeholder="Share your experience"></textarea>
+				<button class="btn btn-primary" type="submit">Add Comment</button>
+			</form>
+		</aside>
+	</main>
+{% endblock %}

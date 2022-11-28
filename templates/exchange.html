@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ 	eXchange
+ {% endblock %}
+
+ {% block body %}
+ 	<form action="/exchange" method="post">
+
+ 		<div class="change">
+ 			<h5>FROM</h5>
+ 			<input type="text" name="current1" required placeholder="Currency Symbol"/>
+ 		</div>
+ 		<div class="change">
+ 			<h5>TO</h5>
+ 			<input type="text" name="current2" required placeholder="Currency Symbol"/>
+ 		</div>
+ 		<div class="change">
+ 			<h5>AMOUNT</h5>
+ 			<input type="number" name="amount" required placeholder="Amount" min="1"/>
+ 		</div>
+ 		<div>
+ 			<button id="btn" type="submit">Check Rate</button>
+ 		</div>
+ 	</form>
+ {% endblock %}

@@ -1,0 +1,38 @@
+div {
+	text-align: center;
+}
+
+li {
+	text-align: center;
+	display: inline;
+	padding: 5px;
+}
+
+header {
+	text-align: center;
+	border-style: outset;
+}
+
+#btn {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	text-rendering: geometricPrecision;
+}
+
+tr, td {
+	text-align: center;
+	border-style: inset;
+	border-color: turquoise;
+}
+
+tbody, thead {
+	border-style: dotted;
+	text-align: center;
+}
+
+table {
+	text-align: center;
+}
